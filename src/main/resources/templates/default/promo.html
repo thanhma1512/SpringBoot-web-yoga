@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Promo - YogaOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="/default/css/style.css" rel="stylesheet"/>
+</head>
+<body class="font-roboto bg-light-purple">
+<div th:replace="fragments/header :: header"></div>
+
+<main class="container mx-auto py-12 px-4">
+    <h1 class="text-custom-purple text-4xl text-center mb-6">Promotions</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white shadow-md rounded p-6">
+            <img alt="Promo 1" class="w-full h-auto object-contain rounded mb-4" th:src="@{/default/images/5.1.jpg}"/>
+            <h2 class="text-custom-purple text-2xl mb-2">Summer Special</h2>
+            <p class="text-gray-600 mb-4">Get 20% off on all yoga classes this summer. Join us and stay fit!</p>
+            <p class="text-custom-purple font-bold">Valid until: 31st August</p>
+        </div>
+        <div class="bg-white shadow-md rounded p-6">
+            <img alt="Promo 2" class="w-full h-auto object-contain rounded mb-4" th:src="@{/default/images/3.1.jpg}"/>
+            <h2 class="text-custom-purple text-2xl mb-2">New Member Discount</h2>
+            <p class="text-gray-600 mb-4">New members get a 15% discount on their first month. Sign up today!</p>
+            <p class="text-custom-purple font-bold">Valid until: 30th September</p>
+        </div>
+            <div class="bg-white shadow-md rounded p-6">
+                <img alt="Promo 3" class="w-full h-auto object-contain rounded mb-4" th:src="@{/default/images/4.1.jpg}"/>
+                <h2 class="text-custom-purple text-2xl mb-2">Refer a Friend</h2>
+                <p class="text-gray-600 mb-4">Refer a friend and both of you get 10% off on your next month’s fee.</p>
+                <p class="text-custom-purple font-bold">Valid until: 31st December</p>
+            </div>
+    </div>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

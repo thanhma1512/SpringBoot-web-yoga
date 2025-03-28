@@ -1,0 +1,32 @@
+<!-- src/main/resources/templates/fragments/header.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<body>
+<header class="bg-white shadow-md">
+    <div class="bg-[#745a82] h-2"></div>
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+        <div class="flex items-center">
+            <img alt="YogaOM logo" class="h-8 w-10" th:src="@{/default/images/logo.jpg}"/>
+            <span class="ml-3 text-xl font-bold text-purple-700">YogaOM</span>
+        </div>
+        <nav class="space-x-6">
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/}">Home</a>
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/classes}">Class</a>
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/promo}">Promo</a>
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/online-class}">Online Class</a>
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/contact}">Contact</a>
+            <a class="text-purple-700 hover:text-purple-900" th:if="${#authorization.expression('hasRole(''MANAGER'')')}" th:href="@{/system}" role="menuitem">System</a>
+            <a class="text-purple-700 hover:text-purple-900" th:if="${#authorization.expression('hasRole(''ADMIN'')')}" th:href="@{/admin}" role="menuitem">Admin Page</a>
+            <span sec:authentication="principal.username" class="text-purple-700 hover:text-purple-900">
+                <span th:text="${principal.username}"></span>
+            </span>
+            <a class="text-purple-700 hover:text-purple-900" th:href="@{/login}">Logout</a>
+        </nav>
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Online Class - YogaOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="/default/css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+<!-- Header -->
+<div th:replace="fragments/header :: header"></div>
+
+<!-- Hero Section -->
+<section class="relative h-80 bg-cover bg-center flex items-center justify-center" style="background-image: url('/default/images/4.1.jpg');">
+    <div class="bg-black bg-opacity-50 p-6 rounded-lg text-center text-white">
+        <h1 class="text-4xl font-bold mb-2">Join Our Online Yoga Classes</h1>
+        <p class="text-lg mb-4">Practice yoga from the comfort of your home with our expert instructors.</p>
+        <a th:href="@{/classes}" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg text-lg font-medium">Join Now</a>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="container mx-auto py-12 px-4">
+    <h2 class="text-3xl text-purple-700 font-bold text-center mb-6">Upcoming Classes</h2>
+    <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
+        <ul class="space-y-4">
+            <li class="flex justify-between items-center p-4 border-b border-gray-300">
+                <span class="font-semibold">Hatha Yoga</span>
+                <span class="text-gray-600">Monday, 20:00</span>
+            </li>
+            <li class="flex justify-between items-center p-4 border-b border-gray-300">
+                <span class="font-semibold">Ashtanga Yoga</span>
+                <span class="text-gray-600">Tuesday, 18:00</span>
+            </li>
+            <li class="flex justify-between items-center p-4">
+                <span class="font-semibold">Kundalini Yoga</span>
+                <span class="text-gray-600">Friday, 13:30</span>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<!-- Footer -->
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

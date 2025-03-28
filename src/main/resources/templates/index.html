@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        YogaOM
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="/default/css/style.css" rel="stylesheet"/>
+</head>
+<body class="font-roboto">
+<div th:replace="fragments/header :: header"></div>
+<main class="relative">
+    <div class="relative">
+    <img alt="Group of people practicing yoga" class="w-full h-screen object-cover"
+         th:src="@{/default/images/yoga.jpg}"/>
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="circle circle-5 fade-in zoom-in">
+            <div class="circle circle-4">
+                <div class="circle circle-3">
+                    <div class="circle circle-2">
+                        <div class="dot dot-1"
+                             style="top: -5px; right: 20%; transform: translateX(50%) rotate(90deg); transform-origin: center;">
+                        </div>
+                        <div class="connector"
+                             style="transform: translate(-50%, -50%) rotate(90deg); transform-origin: center;">
+                        </div>
+                        <div class="dot dot-2"
+                             style="bottom: -5px; left: 20%; transform: translateX(-50%) rotate(90deg); transform-origin: center;">
+                        </div>
+                        <div class="circle circle-1">
+                            <h2 class="text-purple-700 text-lg">
+                                Healthy &amp; Fresh
+                            </h2>
+                            <h1 class="text-4xl font-bold text-purple-700 mt-2">
+                                YOGA
+                            </h1>
+                            <p class="text-purple-700 mt-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                            </p>
+                            <div class="mt-6">
+                                <img alt="Decorative yoga icon" class="h-10 w-10" th:src="@{/default/images/logo.jpg}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="relative max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-x-0 top-0 flex justify-center">
+            <div class="w-full h-48 bg-gradient-to-b from-white to-transparent rounded-b-full">
+            </div>
+        </div>
+        <div class="relative text-center">
+            <h2 class="text-custom-purple text-4xl">
+                MEET OUR
+            </h2>
+            <h2 class="text-3xl font-extrabold text-purple-600 sm:text-4xl">
+                YOGA CLASSES
+            </h2>
+        </div>
+        <div class="mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+                <div class="text-left">
+                    <img alt="Person doing Hatha yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                         th:src="@{/default/images/2.1.jpg}"/>
+                    <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                        Hatha
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Lorem ipsum sit amet, consectetur adipiscing...
+                    </p>
+                    <hr class="my-2 border-purple-600"/>
+                    <p class="mt-2 text-purple-800">
+       <span class="font-bold">
+        Monday
+       </span>
+                        <span class="font-normal">
+        - 20:00 hs.
+       </span>
+                    </p>
+                </div>
+                <div class="text-left">
+                    <img alt="Person doing Ashtanga yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                         th:src="@{/default/images/2.2.jpg}"/>
+                    <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                        Ashtanga
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Lorem ipsum dolor amet, consectetur adipiscing...
+                    </p>
+                    <hr class="my-2 border-purple-600"/>
+                    <p class="mt-2 text-purple-800">
+       <span class="font-bold">
+        Tuesday
+       </span>
+                        <span class="font-normal">
+        - 18:00 hs.
+       </span>
+                    </p>
+                </div>
+                <div class="text-left">
+                    <img alt="Person doing Kundalini yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                         th:src="@{/default/images/2.3.jpg}"/>
+                    <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                        Kundalini
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Lorem ipsum dolor sit consectetur adipiscing...
+                    </p>
+                    <hr class="my-2 border-purple-600"/>
+                    <p class="mt-2 text-purple-800">
+       <span class="font-bold">
+        Friday
+       </span>
+                        <span class="font-normal">
+        - 13:30 hs.
+       </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 text-center">
+            <a th:href="@{/classes}">
+                <button class="bg-purple-600 text-white font-bold py-2 px-4 rounded-full hover:bg-purple-700">
+                    SHOW MORE
+                </button>
+            </a>
+        </div>
+
+
+        <div class="mt-8 relative w-full h-screen bg-gray-100">
+            <svg class="absolute top-0 left-0 w-full h-auto" viewBox="0 0 1440 320">
+                <path fill="#7E57C2"
+                      d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,149.3C840,171,960,213,1080,224C1200,235,1320,213,1380,202.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+            </svg>
+
+            <img alt="Woman doing yoga in a lunge position on a wooden floor"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 th:src="@{/default/images/3.1.jpg}"/>
+
+            <!-- Hiển thị hiệu ứng vòng tròn với khoảng cách hợp lý -->
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full flex flex-col items-center justify-center text-center shadow-lg relative
+        before:content-[''] before:absolute before:w-40 before:h-40 before:border-[2px] before:border-[#745a82] before:opacity-50 before:rounded-full before:z-10 before:-top-4 before:-left-4
+        after:content-[''] after:absolute after:w-48 after:h-48 after:border-[2px] after:border-[#745a82] after:opacity-30 after:rounded-full after:z-20 after:-top-8 after:-left-8">
+                <div class="text-4xl font-bold text-purple-700">10%</div>
+                <div class="text-lg text-gray-500 mt-2">OFF</div>
+            </div>
+
+            <!-- Nội dung văn bản -->
+            <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white">
+                <div class="text-6xl font-extrabold leading-tight">SUMMER</div>
+                <div class="text-5xl font-bold">CLASS</div>
+                <div class="mt-4 text-4xl">
+                    <div>22.12.2020</div>
+                    <div>24.03.2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3">
+                <h1 class="text-custom-purple text-3xl font-bold">PRACTICE</h1>
+                <h2 class="text-custom-purple text-2xl">DYNAMICS</h2>
+                <div class="mt-6">
+                    <h3 class="text-custom-purple text-xl font-bold">1. HATHA YOGA</h3>
+                    <p class="text-custom-purple mt-3 text-lg">Hatha is the most classic yoga. Its origin is in the Raya
+                        Yoga of Patanjali and other classical texts such as Bhagavad Gita and Hatha Yoga Pradipika.</p>
+                    <hr class="my-4 border-gray-300"/>
+                    <p class="text-custom-purple font-bold text-lg">10 modules</p>
+                    <p class="text-custom-purple font-bold text-lg">divided into 7 weekends</p>
+                    <div class="flex justify-between mt-3 text-lg">
+                        <div>
+                            <p class="text-custom-purple">Start</p>
+                            <p class="text-custom-purple">April 15</p>
+                            <p class="text-custom-purple">20.00 hs</p>
+                        </div>
+                        <div>
+                            <p class="text-custom-purple">Price</p>
+                            <p class="text-custom-purple">$900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center relative">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="circle circle-5 fade-in zoom-in">
+                        <div class="circle circle-4">
+                            <div class="circle circle-3">
+                                <div class="circle circle-2">
+                                    <div class="dot dot-1"
+                                         style="top: -5px; right: 20%; transform: translateX(50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="connector"
+                                         style="transform: translate(-50%, -50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="dot dot-2"
+                                         style="bottom: -5px; left: 20%; transform: translateX(-50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="circle circle-1">
+                                        <img alt="Yoga Image" class="w-3/4 h-3/4 object-cover rounded-full"
+                                             th:src="@{/default/images/4.1.jpg}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-[-200px] left-[100%] transform -translate-x-1/2 text-custom-purple text-sm font-bold tracking-widest text-center">
+                    <p>H</p>
+                    <p>A</p>
+                    <p>T</p>
+                    <p>H</p>
+                    <p>A</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center relative">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="circle circle-5 fade-in zoom-in">
+                        <div class="circle circle-4">
+                            <div class="circle circle-3">
+                                <div class="circle circle-2">
+                                    <div class="dot dot-1"
+                                         style="top: -5px; right: 20%; transform: translateX(50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="connector"
+                                         style="transform: translate(-50%, -50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="dot dot-2"
+                                         style="bottom: -5px; left: 20%; transform: translateX(-50%) rotate(90deg); transform-origin: center;">
+                                    </div>
+                                    <div class="circle circle-1">
+                                        <img alt="Yoga Image" class="w-3/4 h-3/4 object-cover rounded-full"
+                                             th:src="@{/default/images/5.1.jpg}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-[-200px] left-[0%] transform -translate-x-1/2 text-custom-purple text-sm font-bold tracking-widest text-center">
+                    <p>H</p>
+                    <p>A</p>
+                    <p>T</p>
+                    <p>H</p>
+                    <p>A</p>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h1 class="text-custom-purple text-3xl font-bold">POSITION</h1>
+                <h2 class="text-custom-purple text-2xl">DYNAMICS</h2>
+                <div class="mt-6">
+                    <h3 class="text-custom-purple text-xl font-bold">2. KUNDALINI YOGA</h3>
+                    <p class="text-custom-purple mt-3 text-lg">Kundalini is the most classic yoga. Its
+                        origin is in the Raya Yoga of Patanjali and other classical texts such as
+                        Bhagavad Gita and Hatha Yoga
+                        Pradipika.</p>
+                    <hr class="my-4 border-gray-300"/>
+                    <p class="text-custom-purple font-bold text-lg">17 modules</p>
+                    <p class="text-custom-purple font-bold text-lg">divided into 7 weekends</p>
+                    <div class="flex justify-between mt-3 text-lg">
+                        <div>
+                            <p class="text-custom-purple">Start</p>
+                            <p class="text-custom-purple">April 15</p>
+                            <p class="text-custom-purple">20.00 hs</p>
+                        </div>
+                        <div>
+                            <p class="text-custom-purple">Price</p>
+                            <p class="text-custom-purple">$900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white text-gray-700">
+        <div class="text-center py-8">
+            <div class="text-center py-8">
+                <div class="flex items-center justify-center">
+                    <div class="w-24 border-b-2 border-[#745a82] mx-2"></div>
+                    <h1 class="text-2xl font-bold text-purple-700">HEALTHY</h1>
+                    <div class="w-24 border-b-2 border-[#745a82] mx-2"></div>
+                </div>
+                <p class="text-lg" style="color: #745a82;">
+                    LIFE
+                </p>
+            </div>
+            <div class="flex justify-center space-x-8 px-4">
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
+                        <img alt="Icon of a person exercising" class="rounded-icon"
+                             th:src="@{/default/images/6.1.jpg}"/>
+                    </div>
+                    <h2 class="font-bold" style="color: #745a82;">
+                        EXERCISE
+                    </h2>
+                    <p class="text-gray-500" style="color: #745a82;">
+                        Lorem ipsum dolor sit amet consectetur adipiscing, elit molestie posuere
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
+                        <img alt="Icon of a person feeding" class="rounded-icon"
+                             th:src="@{/default/images/6.2.jpg}"/>
+                    </div>
+                    <h2 class="text-purple-700 font-bold">
+                        FEEDING
+                    </h2>
+                    <p class="text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipiscing, elit molestie posuere
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
+                        <img alt="Icon of a person meditating" class="rounded-icon"
+                             th:src="@{/default/images/6.3.jpg}"/>
+                    </div>
+                    <h2 class="text-purple-700 font-bold">
+                        MEDITATION
+                    </h2>
+                    <p class="text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipiscing, elit molestie posuere
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-custom-purple text-4xl">
+                    LOOK AT OUR
+                </h2>
+                <h2 class="text-3xl font-extrabold text-purple-600 sm:text-4xl">
+                    SUMMER CLASSES
+                </h2>
+            </div>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+                    <!-- Anusara Class -->
+                    <div class="text-left">
+                        <img alt="Person doing Anusara yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                             th:src="@{/default/images/7.1.jpg}"/>
+                        <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                            Anusara
+                        </h3>
+                        <p class="mt-2 text-gray-400">
+                            Lorem ipsum sit amet, consectetur adipiscing...
+                        </p>
+                        <hr class="my-2 border-purple-600"/>
+                        <p class="mt-2 text-purple-800">
+                            <span class="font-bold">Friday</span>
+                            <span class="font-normal"> - 20:00 hs.</span>
+                        </p>
+                    </div>
+                    <!-- Kripalu Class -->
+                    <div class="text-left">
+                        <img alt="Person doing Kripalu yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                             th:src="@{/default/images/7.2.jpg}"/>
+                        <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                            Kripalu
+                        </h3>
+                        <p class="mt-2 text-gray-400">
+                            Lorem ipsum dolor amet, consectetur adipiscing...
+                        </p>
+                        <hr class="my-2 border-purple-600"/>
+                        <p class="mt-2 text-purple-800">
+                            <span class="font-bold">Tuesday</span>
+                            <span class="font-normal"> - 18:00 hs.</span>
+                        </p>
+                    </div>
+                    <!-- Bharata Class -->
+                    <div class="text-left">
+                        <img alt="Person doing Bharata yoga" class="mx-auto w-40 h-40 rounded-full object-cover"
+                             th:src="@{/default/images/7.3.jpg}"/>
+                        <h3 class="mt-4 text-lg font-semibold text-purple-600">
+                            Bharata
+                        </h3>
+                        <p class="mt-2 text-gray-400">
+                            Lorem ipsum dolor sit consectetur adipiscing...
+                        </p>
+                        <hr class="my-2 border-purple-600"/>
+                        <p class="mt-2 text-purple-800">
+                            <span class="font-bold">Sunday</span>
+                            <span class="font-normal"> - 13:30 hs.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <a th:href="@{/classes}">
+                    <button class="bg-purple-600 text-white font-bold py-2 px-4 rounded-full hover:bg-purple-700">
+                        SHOW MORE
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto p-8 bg-white shadow-lg rounded-lg mb-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/3">
+                    <h1 class="text-custom-purple text-4xl">YOGA INITIATION</h1>
+                    <h2 class="text-custom-purple text-3xl font-bold">WORKSHOP</h2>
+                    <div class="mt-6">
+                        <h3 class="text-custom-purple text-xl font-bold">TRY YOUR FIRST FREE</h3>
+                        <h3 class="text-custom-purple text-xl font-bold">YOGE CLASS</h3>
+                        <p class="text-custom-purple mt-3 text-lg">22.12.2020</p>
+                        <p class="text-custom-purple mt-3 text-lg">24.03.2021</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="circle circle-5 fade-in zoom-in">
+                            <div class="circle circle-4">
+                                <div class="circle circle-3">
+                                    <div class="circle circle-2">
+                                        <div class="dot dot-1"
+                                             style="top: -5px; right: 20%; transform: translateX(50%) rotate(90deg); transform-origin: center;">
+                                        </div>
+                                        <div class="connector"
+                                             style="transform: translate(-50%, -50%) rotate(90deg); transform-origin: center;">
+                                        </div>
+                                        <div class="dot dot-2"
+                                             style="bottom: -5px; left: 20%; transform: translateX(-50%) rotate(90deg); transform-origin: center;">
+                                        </div>
+                                        <div class="circle circle-1">
+                                            <img alt="Yoga Image" class="w-3/4 h-3/4 object-cover rounded-full"
+                                                 th:src="@{/default/images/8.1.jpg}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[-180px] left-[100%] transform -translate-x-1/2 text-custom-purple text-sm font-bold tracking-widest text-center">
+                        <p>W</p>
+                        <p>O</p>
+                        <p>R</p>
+                        <p>K</p>
+                        <p>S</p>
+                        <p>H</p>
+                        <p>O</p>
+                        <p>P</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
+
+

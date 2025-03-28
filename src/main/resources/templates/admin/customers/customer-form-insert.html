@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form Insert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+<div layout:fragment="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-m-6 col-md-6">
+                <h2 class="text-center mb-3">Add New Customer</h2>
+                <form th:action="@{/admin/customers/save}" method="post" th:object="${customer}"
+                      class="border p-4 shadow rounded">
+
+                    <div class="mb-3">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" th:field="*{companyName}" class="form-control"
+                               placeholder="Nhập tên công ty">
+                        <span th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Street Address</label>
+                        <input type="text" th:field="*{streetAddress}" class="form-control" placeholder="Nhập địa chỉ">
+                        <span th:if="${#fields.hasErrors('streetAddress')}" th:errors="*{streetAddress}"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">City</label>
+                        <input type="text" th:field="*{city}" class="form-control" placeholder="Nhập thành phố">
+                        <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Region</label>
+                        <input type="text" th:field="*{region}" class="form-control" placeholder="Nhập khu vực">
+                        <span th:if="${#fields.hasErrors('region')}" th:errors="*{region}" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Postal Code</label>
+                        <input type="text" th:field="*{postalCode}" class="form-control"
+                               placeholder="Nhập mã bưu chính">
+                        <span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Country</label>
+                        <select th:field="*{country}" class="form-select">
+                            <option value="" disabled selected>Chọn quốc gia</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Japan">Japan</option>
+                            <option value="China">China</option>
+                        </select>
+                        <span th:if="${#fields.hasErrors('country')}" th:errors="*{country}" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <a th:href="@{admin/customers/list-customer}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
