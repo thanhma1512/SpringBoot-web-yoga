@@ -14,7 +14,7 @@
 <div th:replace="fragments/header :: header"></div>
 
 <!-- Hero Section -->
-<section class="relative h-80 bg-cover bg-center flex items-center justify-center" style="background-image: url('/default/images/4.1.jpg');">
+<section class="relative w-full h-80 bg-cover bg-center flex items-center justify-center" style="background-image: url('/default/images/yoga.jpg');">
     <div class="bg-black bg-opacity-50 p-6 rounded-lg text-center text-white">
         <h1 class="text-4xl font-bold mb-2">Join Our Online Yoga Classes</h1>
         <p class="text-lg mb-4">Practice yoga from the comfort of your home with our expert instructors.</p>
@@ -25,21 +25,14 @@
 <!-- Main Content -->
 <main class="container mx-auto py-12 px-4">
     <h2 class="text-3xl text-purple-700 font-bold text-center mb-6">Upcoming Classes</h2>
-    <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
-        <ul class="space-y-4">
-            <li class="flex justify-between items-center p-4 border-b border-gray-300">
-                <span class="font-semibold">Hatha Yoga</span>
-                <span class="text-gray-600">Monday, 20:00</span>
-            </li>
-            <li class="flex justify-between items-center p-4 border-b border-gray-300">
-                <span class="font-semibold">Ashtanga Yoga</span>
-                <span class="text-gray-600">Tuesday, 18:00</span>
-            </li>
-            <li class="flex justify-between items-center p-4">
-                <span class="font-semibold">Kundalini Yoga</span>
-                <span class="text-gray-600">Friday, 13:30</span>
-            </li>
-        </ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div th:each="product : ${products}" class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img th:src="@{'/default/images/' + ${product.image}}" alt="Product Image" class="w-full h-48 object-contain">
+            <div class="p-6 text-center">
+                <h3 class="text-2xl font-bold text-purple-700 mb-2" th:text="${product.name}"></h3>
+                <p class="text-purple-700" th:text="${product.content}"></p>
+            </div>
+        </div>
     </div>
 </main>
 

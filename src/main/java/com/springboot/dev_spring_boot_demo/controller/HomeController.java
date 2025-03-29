@@ -21,7 +21,9 @@ public class HomeController {
         return "/default/contact";
     }
     @GetMapping("/online-class")
-    public String logout(){
+    public String logout(Model model) {
+        List<Product> products = productService.getAllProducts();
+        model.addAttribute("products", products);
         return "/default/online-class";
     }
     @GetMapping("/classes")
